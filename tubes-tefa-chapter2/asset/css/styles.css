@@ -1,0 +1,348 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+  background: #ffeadb;
+}
+
+body {
+  font-family: montserrat, arial, verdana;
+}
+/* CSS FOR HEADER */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background: #415f5f;
+  margin: auto;
+}
+#header .logo {
+  color: #edf0f1;
+  text-transform: uppercase;
+}
+
+#header h2 {
+  font-weight: 600;
+  font-size: 21px;
+  text-align: center;
+  color: #edf0f1 ;
+  display: inline-block;
+  margin: 0 77px 0 0;
+}
+#header button {
+  width: 100px;
+  background: #ff9a76;
+  font-weight: bold;
+  color: #fff;
+  transition: 150ms;
+  border: 0 none;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 10px 0px;
+}
+/* CSS FOR FORM */
+#form {
+  width: 800px;
+  margin: 50px auto;
+  position: relative;
+}
+
+#form fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  position: relative;
+}
+#form fieldset:not(:first-of-type) {
+  display: none;
+}
+#form label {
+  font-size: 14px;
+  font-weight:300;
+}
+#form input ,
+#form textarea , 
+#form select.option {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #2c3e50;
+  padding: 15px ;
+  margin-bottom: 15px;
+  width: 100%;
+  font-family: montserrat;
+  font-size: 13px;
+}
+#form select {
+  /* reset */
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+}
+#form select.option {
+  background-image:
+  linear-gradient(45deg, transparent 50%, gray 50%),
+  linear-gradient(135deg, gray 50%, transparent 50%),
+  linear-gradient(to right, #ccc, #ccc);
+  background-position:
+  calc(100% - 20px) calc(1em + 2px),
+  calc(100% - 15px) calc(1em + 2px),
+  calc(100% - 2.5em) 0.5em;
+  background-size:
+  5px 5px,
+  5px 5px,
+  1px 1.5em;
+  background-repeat: no-repeat;
+}
+#form select.option:focus {
+  background-image:
+  linear-gradient(45deg, #679b9b 50%, transparent 50%),
+  linear-gradient(135deg, transparent 50%, #679b9b 50%),
+  linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+    background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 2px #5cd053;
+    border-color: #679b9b;
+    outline: 0;
+}
+#form input:focus ,
+#form textarea:focus{
+  border-color: #679b9b;
+  outline: none;
+  color: #637373;
+}
+#form input[type=date]::-webkit-calendar-picker-indicator {
+  padding-right: 0px;
+}
+#form input:required,
+#form textarea:required {
+  background: #fff url(../image/red_asterisk.png) no-repeat 98% center;
+}
+#form input[type="date"]:required {
+  background: #fff;
+}
+#form textarea:focus:invalid , 
+#form input:focus:invalid{
+  background: #fff url(../image/invalid.png) no-repeat 98% center;
+  box-shadow: 0 0 2px #d45252;
+  border-color: #b03535
+}
+#form input[type="date"]:focus:invalid {
+  background: #fff;
+}
+#form textarea:required:valid , 
+#form input:required:valid {
+  background: #fff url(../image/valid.png) no-repeat 98% center;
+  box-shadow: 0 0 2px #5cd053;
+  border-color: #679b9b;
+}
+#form input[type="date"]:required:valid {
+  background: #fff;
+}
+#form fieldset object {
+  margin: 2px 0px 15px 0px;
+  width: 100%;
+  height: 200px;
+}
+#form fieldset .box-pad{
+  border:solid 1px #679b9b; 
+  width:360px;
+  height:110px;
+  padding:3px;
+  position:relative;
+}
+#form fieldset .clear-button {
+  margin: 10px 0px;
+}
+#form fieldset .clear-button button {
+  background-color: #679b9b;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  padding: 5px 3px;
+  transition: all 0.5s;
+  width: 70px;
+}
+#form .action-button {
+  width: 100px;
+  background: #ff9a76;
+  font-weight: bold;
+  color: #fff;
+  transition: 150ms;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#form .action-button:hover,
+#form .action-button:focus {
+  box-shadow: 0 0 0 2px #f08a5d, 0 0 0 3px #ff9766;
+  color: #fff;
+}
+#form .fs-title {
+  font-size: 15px;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+#form .fs-subtitle {
+  text-align: center;
+  font-weight:normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+#form .fs-hint {
+  text-align: center;
+  color: rgb(254, 61, 61);
+  font-style: italic;
+  font-size: 13px;
+}
+#form #progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  counter-reset: step;
+}
+#form ul {
+  text-align: center;
+}
+#form #progressbar li {
+  list-style-type: none;
+  color: #679b9b;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 33.33%;
+  float: left;
+  position: relative;
+}
+#form #progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #fff;
+  background: #679b9b;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+#form #progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #679b9b;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1;
+}
+#form #progressbar li:first-child:after {
+  content: none;
+}
+#form #progressbar li.active {
+  color: #ff9a76;
+}
+#form #progressbar li.active:before, #form #progressbar li.active:after {
+  background: #ff9a76;
+  color: white;
+}
+/* CSS FOR POPUP */
+.popup {
+  width: 400px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%)scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+.open-popup {
+  visibility: visible;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  top: 50%;
+  transform: translate(-50%,-50%)scale(1);
+}
+.popup img {
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+.popup button {
+  background: #5cd053;
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #fff;
+  border: 0 none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.container.active-blur#blur {
+  filter: blur(2px);
+  pointer-events: none;
+  user-select: none;
+}
+/* CSS FOR RESPONSIVE */
+@media screen and (max-width: 640px) {
+  #header {
+    justify-content: center;
+  }
+  #header h2 {
+  font-size: 15px;
+  margin: 0;
+  }
+  #header .logo ,#header button {
+    display: none;
+  }
+  #form {
+  width: 100%;
+  margin: 50px auto;
+  position: relative;
+  }
+  #form fieldset .box-pad{
+  width: 150px;
+  height: 100px;
+  }
+  #form fieldset .box-pad canvas {
+  width: 200px;
+  height: 120px;
+  }
+}

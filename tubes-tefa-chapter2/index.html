@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Rekuitment PT Telkom</title>
+  <link rel="stylesheet" href="./asset/css/styles.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+  <script type="text/javascript" src="./asset/javascript/signature.js"></script>
+
+</head>
+<body>
+  <div class="container" id="blur"">
+    <!-- header -->
+    <header id="header">
+      <h4 class="logo">PT Telkom Indonesia</h4>
+      <h2>Recruitment Profesional Expert Digital Telkom</h2>
+      <a href="#step1"><button>Get Form</button></a>
+    </header>
+    <!-- End header -->
+    <!-- multistep form -->
+    <form id="form">
+      <!-- progressbar -->
+      <ul id="progressbar">
+        <li class="active">Personal Information</li>
+        <li>Personal Details</li>
+        <li>Syarat dan Ketentuan</li>
+      </ul>
+      <!-- End progressbar -->
+      <!-- fieldsets -->
+      <!-- Step 1 Personal Information -->
+      <fieldset id="step1">
+        <h2 class="fs-title">Personal Information</h2>
+        <h3 class="fs-subtitle"></h3>
+        <p class="fs-hint">*Wajib diisi</p>
+  
+        <label for="nama">Nama:</label>
+        <input type="text" name="nama" placeholder="Nama" id="nama" required/>
+  
+        <label for="alamat">Alamat:</label>
+        <textarea name="alamat" placeholder="Alamat" id="alamat" required></textarea>
+        
+        <label for="telephone">Telephone:</label>
+        <input type="text" name="telephone" id="telephone" placeholder="08**********" pattern="[0]{1}[8]{1}[1-9]{10}" maxlength="12"  title="Ten digits code" onkeypress="return hanyaAngka(event); " required/>
+        
+        <label for="tgl">Tanggal Lahir:</label>
+        <input type="date" name="tgl" required id="tgl" >
+  
+        <label for="jenisKelamin">Jenis Kelamin:</label>
+        <select class="option" name="jenisKelamin" id="jenisKelamin" >
+          <option value="Laki - Laki">Laki - Laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
+        
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Email" id="email" required />
+  
+        <label for="pendidikan">Pendidikan Terakhir:</label>
+        <select class="option" name="pendidikan" id="pendidikan" >
+          <option value="S1">S1</option>
+          <option value="S2">S2</option>
+          <option value="S3">S3</option>
+        </select>
+  
+        <label for="asalUniv">Asal Universitas:</label>
+        <input type="text" name="asalUniv" id="asalUniv" placeholder="Asal Universitas" required/>
+  
+        <label for="job">Bidang yang Diplih:</label>
+        <select class="option" name="job" id="job">
+          <option value="Front End">Front End</option>
+          <option value="Back End">Back End</option>
+          <option value="Software Architect">Software Architect</option>
+          <option value="Quality Assurance">Quality Assurance</option>
+          <option value="Document Engineer">Document Engineer</option>
+          <option value="Android Developer">Android Developer</option>
+          <option value="Android Developer">Android Developer</option>
+        </select>
+  
+        <label for="pengalamanKerja">Lama Pengalaman Bidang yang Dipilih (tahun):</label>
+        <input type="number" name="pengalamanKerja" placeholder="Minimal 5 tahun" id="pglKerja" min="5" required onkeypress="return hanyaAngka(event); " />
+  
+        <label for="fotoDiri">Foto Diri 3x4:</label>
+        <input type="file" id="fotoDiri" name="fotoDiri" onchange="return validasiEkstensiImg()" required />
+        <div id="preview"></div>
+
+        <label for="cv">Upload CV (Max 500KB):</label>
+        <input type="file" id="cv" name="cv" onchange="validasiSizePDF(this)" required>
+  
+        <button type="button" name="next" class="next action-button" value="Next" id="next">Next</button>
+      </fieldset>
+      <!-- End Step 1 Personal Information -->
+      <!-- Step 2 Personal Details -->
+      <fieldset id="step2">
+        <h2 class="fs-title">Personal Details</h2>
+        <h3 class="fs-subtitle">*Tidak Wajib Diisi</h3>
+        <label for="bgSekolah">Background Sekolah:</label>
+        <textarea name="bgSekolah" placeholder="Isi Riwayat Pendidikan"></textarea>
+  
+        <label for="sertifikat">Sertifikat Internasional:</label>
+        <input type="file" id="sertifikat" name="sertifikat">
+  
+        <label for="portofolio">Portofolio:</label>
+        <input type="url" name="Portofolio" placeholder="Link Portofolio" />
+  
+        <button type="button" name="previous" class="previous action-button" value="Previous">Kembali</button>
+        <button type="button" name="next" class="next action-button" value="Next">Next</button>
+      </fieldset>
+      <!-- End Step 2 Personal Details -->
+      <!-- Step 3 Syarat dan Ketentuan -->
+      <fieldset id="step3">
+        <h2 class="fs-title">Syarat dan Ketentuan</h2>
+        <h3 class="fs-subtitle">*Silahkan Tanda Tangan Untuk Menyetujui Persyaratan dan Ketentuan Yang Ada </h3>
+        <label for="">Persayaratan dan Ketentuan (hanya contoh) :</label>
+        <object data="./asset/pdf syarat dan ketentuan/Syarat dan Ketentuan (contoh).pdf">
+          <div>No online PDF viewer installed</div>
+        </object>
+  
+        <label for="signature-pad">Tanda Tangan:</label>
+        <div id="signature-pad">
+          <div class="box-pad">
+            <div id="note" onmouseover="note_function();">Silahkan Tanda Tangan Disini..</div>
+            <canvas id="the_canvas" width="350px" height="100px"></canvas>
+          </div>
+          <div class="clear-button">
+            <input type="hidden" id="signature" name="signature">
+            <button type="button" id="clear_btn" class="btn btn-danger" data-action="clear"><span class=""></span> Clear</button>
+          </div>
+        </div>
+  
+        <button type="button" name="previous" class="previous action-button">Previous</button>
+        <button type="button" name="submit" class="submit action-button">Submit</button>
+      </fieldset>
+      <!-- End Step 3 Syarat dan Ketentuan -->
+    </form>
+  </div>
+  <!-- End multistep form -->
+  <!-- Popup -->
+  <div class="overlay"></div>
+  <div class="popup" id="popup">
+    <img src="./asset/image/404-tick.png" alt="">
+    <h2>Terkirim</h2>
+    <p id="pesan-popup"></p>
+    <button type="button" class="close-popup action-button">OK</button>
+  </div>
+  <!-- End Popup -->
+  <script src="./asset/javascript/main.js"></script>
+</body>
+</html>
