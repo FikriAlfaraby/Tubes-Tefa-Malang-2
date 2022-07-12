@@ -29,7 +29,7 @@ body {
   font-weight: 600;
   font-size: 21px;
   text-align: center;
-  color: #edf0f1 ;
+  color: #edf0f1;
   display: inline-block;
   margin: 0 77px 0 0;
 }
@@ -67,16 +67,16 @@ body {
 }
 #form label {
   font-size: 14px;
-  font-weight:300;
+  font-weight: 300;
 }
-#form input ,
-#form textarea , 
+#form input,
+#form textarea,
 #form select.option {
   border: 1px solid #ccc;
   border-radius: 3px;
   box-sizing: border-box;
   color: #2c3e50;
-  padding: 15px ;
+  padding: 15px;
   margin-bottom: 15px;
   width: 100%;
   font-family: montserrat;
@@ -84,54 +84,41 @@ body {
 }
 #form select {
   /* reset */
-  margin: 0;      
+  margin: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
-  
 }
 #form select.option {
-  background-image:
-  linear-gradient(45deg, transparent 50%, gray 50%),
-  linear-gradient(135deg, gray 50%, transparent 50%),
-  linear-gradient(to right, #ccc, #ccc);
-  background-position:
-  calc(100% - 20px) calc(1em + 2px),
-  calc(100% - 15px) calc(1em + 2px),
-  calc(100% - 2.5em) 0.5em;
-  background-size:
-  5px 5px,
-  5px 5px,
-  1px 1.5em;
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat;
 }
 #form select.option:focus {
-  background-image:
-  linear-gradient(45deg, #679b9b 50%, transparent 50%),
-  linear-gradient(135deg, transparent 50%, #679b9b 50%),
-  linear-gradient(to right, #ccc, #ccc);
-  background-position:
-    calc(100% - 15px) 1em,
-    calc(100% - 20px) 1em,
+  background-image: linear-gradient(45deg, #679b9b 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, #679b9b 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em,
     calc(100% - 2.5em) 0.5em;
-    background-size:
-    5px 5px,
-    5px 5px,
-    1px 1.5em;
-    background-repeat: no-repeat;
-    box-shadow: 0 0 2px #5cd053;
-    border-color: #679b9b;
-    outline: 0;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 2px #5cd053;
+  border-color: #679b9b;
+  outline: 0;
 }
-#form input:focus ,
-#form textarea:focus{
+#form input:focus,
+#form textarea:focus {
   border-color: #679b9b;
   outline: none;
   color: #637373;
 }
-#form input[type=date]::-webkit-calendar-picker-indicator {
+#form input[type="date"]::-webkit-calendar-picker-indicator {
   padding-right: 0px;
 }
 #form input:required,
@@ -141,16 +128,16 @@ body {
 #form input[type="date"]:required {
   background: #fff;
 }
-#form textarea:focus:invalid , 
-#form input:focus:invalid{
+#form textarea:focus:invalid,
+#form input:focus:invalid {
   background: #fff url(../image/invalid.png) no-repeat 98% center;
   box-shadow: 0 0 2px #d45252;
-  border-color: #b03535
+  border-color: #b03535;
 }
 #form input[type="date"]:focus:invalid {
   background: #fff;
 }
-#form textarea:required:valid , 
+#form textarea:required:valid,
 #form input:required:valid {
   background: #fff url(../image/valid.png) no-repeat 98% center;
   box-shadow: 0 0 2px #5cd053;
@@ -164,12 +151,12 @@ body {
   width: 100%;
   height: 200px;
 }
-#form fieldset .box-pad{
-  border:solid 1px #679b9b; 
-  width:360px;
-  height:110px;
-  padding:3px;
-  position:relative;
+#form fieldset .box-pad {
+  border: solid 1px #679b9b;
+  width: 360px;
+  height: 110px;
+  padding: 3px;
+  position: relative;
 }
 #form fieldset .clear-button {
   margin: 10px 0px;
@@ -212,7 +199,7 @@ body {
 }
 #form .fs-subtitle {
   text-align: center;
-  font-weight:normal;
+  font-weight: normal;
   font-size: 13px;
   color: #666;
   margin-bottom: 20px;
@@ -268,7 +255,8 @@ body {
 #form #progressbar li.active {
   color: #ff9a76;
 }
-#form #progressbar li.active:before, #form #progressbar li.active:after {
+#form #progressbar li.active:before,
+#form #progressbar li.active:after {
   background: #ff9a76;
   color: white;
 }
@@ -279,7 +267,7 @@ body {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%,-50%)scale(0.1);
+  transform: translate(-50%, -50%) scale(0.1);
   text-align: center;
   padding: 0 30px 30px;
   color: #333;
@@ -290,7 +278,7 @@ body {
   visibility: visible;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   top: 50%;
-  transform: translate(-50%,-50%)scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 .popup img {
   width: 100px;
@@ -326,23 +314,30 @@ body {
     justify-content: center;
   }
   #header h2 {
-  font-size: 15px;
-  margin: 0;
+    font-size: 15px;
+    margin: 0;
   }
-  #header .logo ,#header button {
+  #header .logo,
+  #header button {
     display: none;
   }
   #form {
-  width: 100%;
-  margin: 50px auto;
-  position: relative;
+    width: 100%;
+    margin: 50px auto;
+    position: relative;
   }
-  #form fieldset .box-pad{
-  width: 150px;
-  height: 100px;
+  #form fieldset .box-pad {
+    width: 150px;
+    height: 100px;
   }
   #form fieldset .box-pad canvas {
-  width: 200px;
-  height: 120px;
+    width: 200px;
+    height: 100px;
+  }
+  .popup {
+    width: 200px;
+  }
+  .popup #pesan-popup {
+    display: flex;
   }
 }
