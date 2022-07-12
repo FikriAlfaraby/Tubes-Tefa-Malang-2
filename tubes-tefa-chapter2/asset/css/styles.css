@@ -331,8 +331,8 @@ body {
     height: 100px;
   }
   #form fieldset .box-pad canvas {
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    height: 80px;
   }
   .popup {
     width: 200px;
